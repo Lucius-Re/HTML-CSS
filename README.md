@@ -12,7 +12,7 @@
 * Added structured headings (`<h1>`–`<h3>`), paragraph description, ordered list (`<ol>`) for hobbies, and unordered list (`<ul>`) for links[cite: 1].
 * Embedded personal preview image (`<img>`), clickable hyperlinks (`<a>`), and a standard `<button>`[cite: 1].
 
-![Basic HTML Structure](<img width="515" height="979" alt="image" src="https://github.com/user-attachments/assets/7379a2cd-930c-4177-9059-a8a3830ff5f4" />
+!(<img width="515" height="979" alt="image" src="https://github.com/user-attachments/assets/7379a2cd-930c-4177-9059-a8a3830ff5f4" />
 )
 
 ---
@@ -22,7 +22,7 @@
 * Inserted HTML emoji entities inside mood description paragraph[cite: 1].
 * Implemented an interactive `<form>` with text, email, and color inputs along with a submit button[cite: 1].
 
-![Intermediate HTML Elements](<img width="339" height="289" alt="image" src="https://github.com/user-attachments/assets/5d40de02-dcf0-4325-9244-02b55cb03b84" />
+!(<img width="339" height="289" alt="image" src="https://github.com/user-attachments/assets/5d40de02-dcf0-4325-9244-02b55cb03b84" />
 )
 
 ---
@@ -32,7 +32,7 @@
 * Styled page using element selectors (`h1`, `p`), class selectors (`.pr`), and ID selectors (`#h3`)[cite: 1].
 * Applied inline CSS for font families and internal `<style>` block for main colors[cite: 1].
 
-![CSS Styling and Selectors](<img width="395" height="225" alt="image" src="https://github.com/user-attachments/assets/cf178ecd-ff23-40bf-91a2-ba1aea9762ca" />)
+!(<img width="395" height="225" alt="image" src="https://github.com/user-attachments/assets/cf178ecd-ff23-40bf-91a2-ba1aea9762ca" />)
 !(<img width="815" height="185" alt="image" src="https://github.com/user-attachments/assets/26099758-cda1-4633-9da8-2433775eea93" />)
 
 
@@ -42,7 +42,7 @@
 ### Part 4: Favicon Implementation (Step 15)
 * Added a custom icon to the browser tab using `<link rel="icon" type="image/png" href="Pictures/pics.png">`[cite: 1].
 
-![Favicon Tab Preview](<img width="175" height="42" alt="image" src="https://github.com/user-attachments/assets/e856af0b-ada2-416a-84ef-9176c4ac0ae7" /> )
+!(<img width="175" height="42" alt="image" src="https://github.com/user-attachments/assets/e856af0b-ada2-416a-84ef-9176c4ac0ae7" /> )
 !(<img width="499" height="26" alt="image" src="https://github.com/user-attachments/assets/68f9e2e7-0e78-4b04-a56f-4a1ea15fa7eb" />)
 
 
@@ -54,7 +54,7 @@
 * Implemented `position: relative` and `position: absolute` element offsets[cite: 1].
 * Created a side-by-side block layout using `float: left` / `float: right` with a `clear: both` fix[cite: 1].
 
-![Layout Box Model and Positioning](<img width="1230" height="140" alt="image" src="https://github.com/user-attachments/assets/828f33a8-c07f-4d80-ab61-304321e468f5" />
+!(<img width="1230" height="140" alt="image" src="https://github.com/user-attachments/assets/828f33a8-c07f-4d80-ab61-304321e468f5" />
 )
 
 ---
