@@ -1,7 +1,7 @@
 # Assignment #2 — Photo Gallery
 
 **Name:** Aibar Aben  
-**Group:** __________
+**Group:** IT-2504
 
 ## What I made
 
