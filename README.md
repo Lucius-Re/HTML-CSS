@@ -1,60 +1,38 @@
-# Assignment 4: Forms and Validation
+# Assignment 5: JavaScript Basics
 
-## Assignment tasks
+## Student
 
-### Part 1 — Basic HTML Forms
+- Name: **Aben Aibar**
+- Group: **IT-2504**
 
-#### Task 0 — Simple Contact Form
+## Part 1: Profile Object, Data Types, and Arithmetic
 
-The form has labeled name, email, and message fields with a submit button.
+**Task 1 — Personal Info Object.** The `userProfile` object stores a name (`string`), birth year (`number`), developer status (`boolean`), and hobbies (`array`).
 
-![Task 0 — Simple contact form](screenshots/task-0-simple-contact.png)
+**Task 2 — Arithmetic Calculations.** The page calculates age from the current year and displays the number of hobbies. The profile and calculations are also logged to the browser console.
 
-#### Task 1 — HTML5 Validation
+![Part 1: Profile and calculations](screenshots/part-1-profile-and-arithmetic.png)
 
-The form uses `required`, `type="email"`, `minlength`, and `maxlength`. The browser blocks an empty or incorrectly formatted submission and displays its built-in validation message.
+## Part 2: Form Input and Events
 
-![Task 1 — HTML5 validation](screenshots/task-1-html5-validation.png)
+**Task 3 — HTML Form Setup.** The form has fields for a username and birth year, plus a Create / Update Profile button.
 
-### Part 2 — Bootstrap Forms
+**Task 4 — Event Listener.** Submitting the form validates the values, updates `userProfile`, and refreshes the profile on the page. The screenshot uses sample data.
 
-#### Task 2 — Bootstrap Form Styling
+![Part 2: Profile form](screenshots/part-2-profile-form.png)
 
-The contact form uses Bootstrap form classes and a responsive grid. Placeholders and short helper messages guide the user.
+## Part 3: DOM List Manipulation
 
-![Task 2 — Bootstrap contact form](screenshots/task-2-bootstrap-contact.png)
+**Task 5 — Creating and Removing Elements.** The Add Item button adds a new `<li>` to the list. Remove Last Item deletes the last entry. The profile and hobby count update with the list.
 
-#### Task 3 — Bootstrap Validation Styles
+![Task 5: Add an item](screenshots/part-3a-dom-add.png)
 
-The form displays Bootstrap `is-invalid` and `is-valid` states with feedback messages below fields. Submit an empty form to see errors; enter valid values to see success messages.
+![Task 5: Remove the last item](screenshots/part-3b-dom-remove.png)
 
-![Task 3 — Bootstrap validation](screenshots/task-3-bootstrap-validation.png)
+## Work Summary
 
-### Part 3 — Advanced Form Project
+Built a simple page with HTML and CSS. JavaScript handles the profile object, age calculation, form submission, and dynamic list updates. Open `index.html` in a browser to run the project.
 
-#### Task 4 — Registration Form
+## GitHub Pages
 
-The responsive registration form includes first and last name, email, password confirmation, gender radios, optional hobby checkboxes, and a country dropdown. Passwords must match and be at least eight characters. Submit displays validation feedback; Reset clears the form.
-
-![Task 4 — Registration form](screenshots/task-4-registration.png)
-
-## Work summary
-
-I built the forms in semantic HTML, added HTML5 validation attributes, and used Bootstrap 5 form and grid classes for styling. JavaScript adds field-level Bootstrap feedback, checks that the password fields match, and provides a local demo success message. The forms do not send information to a server.
-
-## How to run
-
-Open `index.html` in a browser. An internet connection is needed to load the Bootstrap stylesheet from the official CDN.
-
-## References
-
-- [Bootstrap 5.3 forms](https://getbootstrap.com/docs/5.3/forms/overview/)
-- [Bootstrap 5.3 validation](https://getbootstrap.com/docs/5.3/forms/validation/)
-- [MDN: Forms](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms)
-
-## Walkthrough notes
-
-- `required`, `type="email"`, `minlength`, and `maxlength` provide built-in browser checks.
-- Bootstrap's grid classes (`row`, `col-md-6`, and `col-12`) rearrange fields for smaller screens.
-- `is-invalid` and `is-valid` show field state; feedback text explains what needs attention.
-- `setCustomValidity()` checks that the confirmation password matches the original password.
+Upload all project files to a public GitHub repository. In the repository settings, enable GitHub Pages from the `main` branch and the root folder (`/`). Submit both the repository link and the GitHub Pages link.

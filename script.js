@@ -1,134 +1,110 @@
-"use strict";
+const userProfile = {
+  name: "Alex",
+  birthYear: 2003,
+  isDeveloper: true,
+  hobbies: ["Reading", "Design", "Travel"],
+};
 
-function showNotice(form, visible) {
-  const notice = form.querySelector(".form-notice");
-  if (notice) notice.hidden = !visible;
+const currentYear = new Date().getFullYear();
+const profileForm = document.querySelector("#profile-form");
+const usernameInput = document.querySelector("#username");
+const birthYearInput = document.querySelector("#birth-year");
+const formMessage = document.querySelector("#form-message");
+const ageValue = document.querySelector("#age-value");
+const hobbiesCount = document.querySelector("#hobbies-count");
+const birthYearValue = document.querySelector("#birth-year-value");
+const profileName = document.querySelector("#profile-heading");
+const developerStatus = document.querySelector("#developer-status");
+const itemForm = document.querySelector("#item-form");
+const newItemInput = document.querySelector("#new-item");
+const hobbyList = document.querySelector("#hobby-list");
+const removeItemButton = document.querySelector("#remove-item");
+const listMessage = document.querySelector("#list-message");
+
+function getAge() {
+  return currentYear - userProfile.birthYear;
 }
 
-document.querySelectorAll("[data-demo-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    showNotice(form, true);
-  });
-  form.addEventListener("input", () => showNotice(form, false));
-});
+function renderHobbies() {
+  hobbyList.replaceChildren();
 
-document.querySelectorAll("[data-native-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (form.checkValidity()) showNotice(form, true);
-  });
-  form.addEventListener("input", () => showNotice(form, false));
-  form.addEventListener("reset", () => showNotice(form, false));
-});
+  if (userProfile.hobbies.length === 0) {
+    const emptyMessage = document.createElement("li");
+    emptyMessage.className = "empty-list";
+    emptyMessage.textContent = "Your list is empty. Add the first item.";
+    hobbyList.append(emptyMessage);
+  } else {
+    userProfile.hobbies.forEach((hobby) => {
+      const item = document.createElement("li");
+      item.className = "hobby-item";
+      item.textContent = hobby;
+      hobbyList.append(item);
+    });
+  }
 
-function describeValidity(input) {
-  if (input.validity.valueMissing) return input.dataset.requiredMessage || "Please complete this field.";
-  if (input.validity.typeMismatch && input.type === "email") return "Enter a valid email address.";
-  if (input.validity.tooShort && input.type === "password") return "Password must be at least 8 characters long.";
-  if (input.validity.tooShort) return `Enter at least ${input.minLength} characters.`;
-  if (input.validity.tooLong) return `Use no more than ${input.maxLength} characters.`;
-  if (input.validity.customError) return "Passwords must match.";
-  return "Check this field and try again.";
+  removeItemButton.disabled = userProfile.hobbies.length === 0;
+  listMessage.textContent = userProfile.hobbies.length
+    ? "You can add another hobby."
+    : "Add a hobby to get started.";
 }
 
-function markField(input, showState) {
-  if (!showState) {
-    input.classList.remove("is-valid", "is-invalid");
-    input.removeAttribute("aria-invalid");
+function renderProfile() {
+  profileName.textContent = userProfile.name;
+  ageValue.textContent = getAge();
+  hobbiesCount.textContent = userProfile.hobbies.length;
+  birthYearValue.textContent = userProfile.birthYear;
+  developerStatus.textContent = userProfile.isDeveloper ? "Yes" : "No";
+  renderHobbies();
+}
+
+function logProfile() {
+  console.log("User profile:", userProfile);
+  console.log(`Age: ${getAge()}; hobbies: ${userProfile.hobbies.length}.`);
+}
+
+profileForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = usernameInput.value.trim();
+  const birthYear = Number(birthYearInput.value);
+  const isValidYear = Number.isInteger(birthYear) && birthYear >= 1900 && birthYear <= currentYear;
+
+  if (!name || !isValidYear) {
+    formMessage.textContent = `Enter a name and a year from 1900 to ${currentYear}.`;
+    formMessage.classList.add("is-error");
     return;
   }
-  const valid = input.checkValidity();
-  input.classList.toggle("is-valid", valid);
-  input.classList.toggle("is-invalid", !valid);
-  input.setAttribute("aria-invalid", String(!valid));
-  const invalidMessage = input.parentElement.querySelector(".invalid-feedback");
-  if (invalidMessage) invalidMessage.textContent = describeValidity(input);
-}
 
-function refreshPasswordMatch(password, confirmation, showState) {
-  if (confirmation.value && confirmation.value !== password.value) {
-    confirmation.setCustomValidity("Passwords must match.");
-  } else {
-    confirmation.setCustomValidity("");
-  }
-  markField(confirmation, showState);
-}
-
-document.querySelectorAll("[data-feedback-form]").forEach((form) => {
-  const fields = Array.from(form.querySelectorAll("input:not([type=radio]):not([type=checkbox]), textarea, select"));
-  const confirmation = form.querySelector("#confirm-password");
-  const password = form.querySelector("#password");
-  let submitted = false;
-
-  fields.forEach((field) => {
-    field.addEventListener("input", () => {
-      showNotice(form, false);
-      const shouldShow = submitted || field.dataset.touched === "true";
-      if (field === password && confirmation) refreshPasswordMatch(password, confirmation, shouldShow || confirmation.dataset.touched === "true");
-      markField(field, shouldShow);
-    });
-    field.addEventListener("blur", () => {
-      field.dataset.touched = "true";
-      if (field === password && confirmation) refreshPasswordMatch(password, confirmation, submitted || confirmation.dataset.touched === "true");
-      markField(field, true);
-    });
-  });
-
-  form.querySelectorAll("input[type=radio][name=gender]").forEach((radio) => {
-    radio.addEventListener("change", () => {
-      showNotice(form, false);
-      if (submitted || radio.closest("fieldset").dataset.touched === "true") updateGenderFeedback(form, true);
-    });
-    radio.addEventListener("blur", () => {
-      radio.closest("fieldset").dataset.touched = "true";
-      updateGenderFeedback(form, true);
-    });
-  });
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    submitted = true;
-    fields.forEach((field) => markField(field, true));
-    if (confirmation && password) refreshPasswordMatch(password, confirmation, true);
-    updateGenderFeedback(form, true);
-
-    if (!form.checkValidity()) {
-      showNotice(form, false);
-      const firstInvalid = form.querySelector(":invalid");
-      if (firstInvalid) firstInvalid.focus();
-      return;
-    }
-    showNotice(form, true);
-  });
-
-  form.addEventListener("reset", () => {
-    window.setTimeout(() => {
-      submitted = false;
-      fields.forEach((field) => {
-        field.dataset.touched = "false";
-        markField(field, false);
-      });
-      const gender = form.querySelector("#gender-group");
-      if (gender) {
-        gender.dataset.touched = "false";
-        gender.classList.remove("is-valid", "is-invalid");
-        gender.querySelector(".invalid-feedback").classList.remove("d-block");
-        gender.querySelector(".valid-feedback").classList.remove("d-block");
-      }
-      if (confirmation) confirmation.setCustomValidity("");
-      showNotice(form, false);
-    }, 0);
-  });
+  userProfile.name = name;
+  userProfile.birthYear = birthYear;
+  renderProfile();
+  logProfile();
+  formMessage.textContent = "Profile updated.";
+  formMessage.classList.remove("is-error");
 });
 
-function updateGenderFeedback(form, showState) {
-  const group = form.querySelector("#gender-group");
-  if (!group || !showState) return;
-  const radios = Array.from(group.querySelectorAll("input[type=radio]"));
-  const selected = radios.some((radio) => radio.checked);
-  group.classList.toggle("is-valid", selected);
-  group.classList.toggle("is-invalid", !selected);
-  group.querySelector(".invalid-feedback").classList.toggle("d-block", !selected);
-  group.querySelector(".valid-feedback").classList.toggle("d-block", selected);
-}
+itemForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const newItem = newItemInput.value.trim();
+
+  if (!newItem) return;
+
+  userProfile.hobbies.push(newItem);
+  newItemInput.value = "";
+  renderProfile();
+  logProfile();
+  newItemInput.focus();
+});
+
+removeItemButton.addEventListener("click", () => {
+  if (userProfile.hobbies.length === 0) return;
+
+  const removedItem = userProfile.hobbies.pop();
+  renderProfile();
+  logProfile();
+  listMessage.textContent = `Removed: ${removedItem}.`;
+});
+
+birthYearInput.max = currentYear;
+renderProfile();
+logProfile();
