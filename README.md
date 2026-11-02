@@ -73,7 +73,7 @@ I built a responsive portfolio page and used jQuery selectors, DOM updates, visi
 
 ## GitHub Pages
 
-[Open the Assignment 6 portfolio](https://lucius-re.github.io/HTML-CSS/). The previous /assignment6/ link remains available.
+This repository currently publishes assignment2-gallery. To publish this jQuery portfolio, select assignment6-jquery in Settings > Pages.
 
 ## How to run
 
