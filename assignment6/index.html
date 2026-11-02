@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aben Aibar's jQuery learning portfolio for Front-End Assignment 6.">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>Aben Aibar | jQuery Portfolio</title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#top">Aben Aibar</a>
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#workbench">Workbench</a>
+          <a href="#contact">Contact</a>
+          <span class="group-tag">IT-2504</span>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="overline">FRONT-END · ASSIGNMENT 06</p>
+            <p class="hero-kicker" id="greeting">Welcome to my portfolio.</p>
+            <h1 id="hero-title">Hello, I’m <span>Aben Aibar.</span></h1>
+            <p class="hero-intro profile-intro">I’m a front-end student learning to build clear, useful websites. This page shows what I’ve practiced with jQuery.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#workbench">View the assignment</a>
+              <button class="button button-quiet" id="headline-button" type="button">Change headline</button>
+            </div>
+            <p class="hero-caption">Currently learning jQuery · Group IT-2504</p>
+          </div>
+        </section>
+
+        <section class="section-block" id="about" aria-labelledby="part-one-title">
+          <div class="section-heading">
+            <div><p class="section-label">PART 01 <span>·</span> THE INTRO</p><h2 id="part-one-title">A bit about me<span class="heading-period">.</span></h2></div>
+            <p class="section-aside">A small profile, made a little more interactive.</p>
+          </div>
+          <article class="feature-card profile-card" id="task-1" aria-labelledby="profile-title">
+            <div class="profile-details">
+              <div class="card-meta"><span class="task-pill">TASK 01</span><span class="mono">SELECTORS + CSS</span></div>
+              <h3 id="profile-title">Welcome to my portfolio.</h3>
+              <p class="profile-summary" id="profile-summary">I’m a student learning how HTML, CSS, and JavaScript work together. This page is a practical portfolio for my jQuery assignment.</p>
+              <div class="headline-row"><span class="headline-label">TODAY’S HEADLINE</span><p id="profile-headline">Front-end in progress <span aria-hidden="true">↗</span></p></div>
+              <div class="profile-controls">
+                <button class="theme-button" id="light-theme" type="button"><span class="theme-swatch swatch-light"></span> Light</button>
+                <button class="theme-button" id="dark-theme" type="button"><span class="theme-swatch swatch-dark"></span> Dark</button>
+                <span class="control-hint">Switch the page mood</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="section-block" aria-labelledby="part-two-title">
+          <div class="section-heading">
+            <div><p class="section-label">PART 02 <span>·</span> THE LITTLE THINGS</p><h2 id="part-two-title">Show, tell, and play<span class="heading-period">.</span></h2></div>
+            <p class="section-aside">A few gentle effects make the page feel alive.</p>
+          </div>
+          <div class="two-column-grid">
+            <article class="feature-card about-card" id="task-2" aria-labelledby="about-title">
+              <div class="card-meta"><span class="task-pill">TASK 02</span><span class="mono">VISIBILITY</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">ABOUT</p><h3 id="about-title">About me</h3></div></div>
+              <p class="card-body">I’m exploring how structure, style, and interaction work together. This little portfolio is a place to try things, learn from them, and make the next version better.</p>
+              <div class="status-box visibility-content">
+                <span class="status-marker"><span></span> RIGHT NOW</span>
+                <p id="status-message">Currently learning jQuery!</p>
+                <div class="fun-facts">
+                  <span>✳ &nbsp;Focus: purposeful details</span>
+                  <span>↗ &nbsp;Topic: selectors and effects</span>
+                  <span>⌘ &nbsp;Next: publish on GitHub Pages</span>
+                </div>
+              </div>
+              <div class="button-row effect-buttons" role="group" aria-label="Control about details visibility">
+                <button class="button button-small button-outline" id="hide-about" type="button">Hide</button>
+                <button class="button button-small button-outline" id="show-about" type="button">Show</button>
+                <button class="button button-small button-outline" id="toggle-about" type="button">Toggle</button>
+              </div>
+            </article>
+
+            <article class="feature-card gallery-card" id="task-3" aria-labelledby="gallery-title">
+              <div class="card-meta"><span class="task-pill">TASK 03</span><span class="mono">FADE EFFECTS</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">GALLERY</p><h3 id="gallery-title">Things I’m working on</h3></div><span class="photo-count">02 images</span></div>
+              <div class="gallery-grid">
+                <figure class="gallery-item" id="gallery-first">
+                  <img src="assets/study-desk.svg" alt="Illustration of a laptop and notebook on a warm desk">
+                  <figcaption><span>01 / SMALL STEPS</span><strong>Make room to explore.</strong></figcaption>
+                </figure>
+                <figure class="gallery-item" id="gallery-second">
+                  <img src="assets/idea-garden.svg" alt="Illustration of colorful shapes growing like ideas in a garden">
+                  <figcaption><span>02 / NEW IDEAS</span><strong>Let curiosity grow.</strong></figcaption>
+                </figure>
+              </div>
+              <div class="button-row effect-buttons fade-controls" role="group" aria-label="Fade gallery images">
+                <button class="button button-small button-outline" id="fade-out-first" type="button">Fade out 01</button>
+                <button class="button button-small button-outline" id="fade-in-first" type="button">Fade in 01</button>
+                <button class="button button-small button-outline" id="fade-toggle-second" type="button">Toggle 02</button>
+              </div>
+            </article>
+
+            <article class="feature-card favorites-card" id="task-4" aria-labelledby="favorites-title">
+              <div class="card-meta"><span class="task-pill">TASK 04</span><span class="mono">SLIDE EFFECTS</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">FAVORITES</p><h3 id="favorites-title">A few favorites</h3></div></div>
+              <div class="favorite-toolbar" role="group" aria-label="Expand or collapse all favorites">
+                <button type="button" id="open-favorites">Open all</button><span></span><button type="button" id="close-favorites">Close all</button>
+              </div>
+              <div class="favorite-item">
+                <button class="favorite-trigger" type="button" aria-expanded="true" aria-controls="favorite-music" data-panel="favorite-music"><span class="favorite-icon">♫</span><span><small>ON REPEAT</small><strong>My Favorite Music</strong></span><span class="trigger-mark" aria-hidden="true">−</span></button>
+                <div class="favorite-panel" id="favorite-music"><p>Example pick: instrumental music for a focused study session. Add a favorite artist or genre that feels like you.</p><span class="panel-number">01</span></div>
+              </div>
+              <div class="favorite-item">
+                <button class="favorite-trigger" type="button" aria-expanded="false" aria-controls="favorite-movie" data-panel="favorite-movie"><span class="favorite-icon icon-coral">◉</span><span><small>ON THE SCREEN</small><strong>My Favorite Movie</strong></span><span class="trigger-mark" aria-hidden="true">+</span></button>
+                <div class="favorite-panel" id="favorite-movie" style="display:none"><p>Example pick: a story with memorable visuals. Add your favorite film and one detail that stayed with you.</p><span class="panel-number">02</span></div>
+              </div>
+              <div class="favorite-item">
+                <button class="favorite-trigger" type="button" aria-expanded="false" aria-controls="favorite-subject" data-panel="favorite-subject"><span class="favorite-icon icon-green">⌘</span><span><small>ALWAYS LEARNING</small><strong>My Favorite Subject</strong></span><span class="trigger-mark" aria-hidden="true">+</span></button>
+                <div class="favorite-panel" id="favorite-subject" style="display:none"><p>Example pick: human-centered design, where technology meets the way people think and work.</p><span class="panel-number">03</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-block" id="workbench" aria-labelledby="part-three-title">
+          <div class="section-heading">
+            <div><p class="section-label">PART 03 <span>·</span> THE WORKBENCH</p><h2 id="part-three-title">Build it, change it, try it<span class="heading-period">.</span></h2></div>
+            <p class="section-aside">Little interactions, built with jQuery methods.</p>
+          </div>
+          <div class="two-column-grid workbench-grid">
+            <article class="feature-card skills-card" id="task-5" aria-labelledby="skills-title">
+              <div class="card-meta"><span class="task-pill">TASK 05</span><span class="mono">ADD + REMOVE</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">A GROWING TOOLKIT</p><h3 id="skills-title">Skills I’m exploring</h3></div><span class="count-badge" id="skill-count">04</span></div>
+              <ul class="skill-list" id="skill-list" aria-live="polite">
+                <li><span class="skill-bullet">01</span><span>HTML</span><span class="skill-tag">structure</span></li>
+                <li><span class="skill-bullet">02</span><span>CSS</span><span class="skill-tag">visuals</span></li>
+                <li><span class="skill-bullet">03</span><span>JavaScript</span><span class="skill-tag">logic</span></li>
+                <li><span class="skill-bullet">04</span><span>jQuery</span><span class="skill-tag">interaction</span></li>
+              </ul>
+              <label class="field-label" for="new-skill">ADD A SKILL TO THE LIST</label>
+              <div class="input-with-button"><input id="new-skill" name="newSkill" type="text" maxlength="32" placeholder="e.g. Accessibility"><button class="add-icon-button" id="add-skill" type="button">Add skill <span aria-hidden="true">+</span></button></div>
+              <p class="input-feedback" id="skill-feedback" aria-live="polite">Type a skill, then choose where it belongs.</p>
+              <div class="button-row skill-actions"><button class="button button-small button-primary" id="prepend-skill" type="button">Prepend skill <span aria-hidden="true">↑</span></button><button class="button button-small button-outline" id="remove-skill" type="button">Remove skill <span aria-hidden="true">−</span></button></div>
+            </article>
+
+            <article class="feature-card social-card" id="task-6" aria-labelledby="social-title">
+              <div class="card-meta"><span class="task-pill">TASK 06</span><span class="mono">ATTRIBUTES</span></div>
+              <p class="mini-label">FIND ME AROUND THE WEB</p>
+              <h3 id="social-title">Let’s stay<br>connected<span class="heading-period">.</span></h3>
+              <p class="card-body social-copy">A tiny link with a changing destination. Try the button and see where it points.</p>
+              <div class="social-link-row"><a id="social-link" href="https://github.com/Lucius-Re/HTML-CSS/tree/assignment6-jquery" target="_blank" rel="noreferrer">GitHub project <span aria-hidden="true">↗</span></a><span class="link-status" id="link-status">PROJECT</span></div>
+              <button class="button button-small button-outline change-link" id="change-link" type="button">Change link destination <span aria-hidden="true">↗</span></button>
+            </article>
+
+            <article class="feature-card live-form-card" id="task-7" aria-labelledby="live-form-title">
+              <div class="card-meta"><span class="task-pill">TASK 07</span><span class="mono">LIVE FORM</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">LIVE PREVIEW</p><h3 id="live-form-title">Say hello</h3></div></div>
+              <form id="live-form" autocomplete="off">
+                <div class="field-grid">
+                  <div class="field-wrap"><label class="field-label" for="visitor-name">YOUR NAME</label><input id="visitor-name" name="name" type="text" placeholder="Name" maxlength="40"></div>
+                  <div class="field-wrap"><label class="field-label" for="visitor-email">EMAIL ADDRESS</label><input id="visitor-email" name="email" type="email" placeholder="you@example.com" maxlength="100"></div>
+                </div>
+                <div class="message-preview" aria-live="polite"><span class="preview-label">LIVE PREVIEW</span><p id="live-preview">Your message will appear here as you type.</p></div>
+              </form>
+            </article>
+
+            <article class="feature-card animation-card" id="task-8" aria-labelledby="animation-title">
+              <div class="card-meta"><span class="task-pill">TASK 08</span><span class="mono">ANIMATE</span></div>
+              <div class="card-heading-row"><div><p class="mini-label">SKILL LEVELS</p><h3 id="animation-title">My skills</h3></div></div>
+              <p class="card-body">These bars start at zero. Press the button to animate each one to a different target.</p>
+              <div class="progress-list" aria-label="Example skill levels">
+                <div class="progress-row" data-skill-level="82"><div><span>HTML &amp; structure</span><span class="progress-value">0%</span></div><div class="progress-track"><span class="progress-fill fill-coral"></span></div></div>
+                <div class="progress-row" data-skill-level="68"><div><span>CSS &amp; visual design</span><span class="progress-value">0%</span></div><div class="progress-track"><span class="progress-fill fill-green"></span></div></div>
+                <div class="progress-row" data-skill-level="54"><div><span>JavaScript &amp; jQuery</span><span class="progress-value">0%</span></div><div class="progress-track"><span class="progress-fill fill-lilac"></span></div></div>
+              </div>
+              <button class="button button-primary animate-button" id="animate-skills" type="button">Animate my skills <span aria-hidden="true">↗</span></button>
+              <p class="animation-note" id="animation-note" aria-live="polite">A visual exercise, not a formal assessment.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="closing-note" id="contact" aria-label="Closing note">
+          <p class="section-label">ASSIGNMENT 06</p>
+          <h2>Thank you for visiting.</h2>
+          <a href="#top" class="back-top">Back to the beginning <span aria-hidden="true">↑</span></a>
+          <span class="closing-caption">JQUERY · ASTANA IT UNIVERSITY</span>
+        </section>
+      </main>
+
+      <footer class="site-footer"><span>© 2026 · Aben Aibar</span><span>Learning in public, one small interaction at a time.</span><span>IT-2504 <i>✳</i></span></footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
