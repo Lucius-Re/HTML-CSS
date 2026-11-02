@@ -1,45 +1,3 @@
-# Assignment 5: JavaScript Basics
-
-## Student
-
-- Name: **Aben Aibar**
-- Group: **IT-2504**
-
-## Part 1: Profile Object, Data Types, and Arithmetic
-
-**Task 1 — Personal Info Object.** The `userProfile` object stores a name (`string`), birth year (`number`), developer status (`boolean`), and hobbies (`array`).
-
-**Task 2 — Arithmetic Calculations.** The page calculates age from the current year and displays the number of hobbies. The profile and calculations are also logged to the browser console.
-
-![Part 1: Profile and calculations](screenshots/part-1-profile-and-arithmetic.png)
-
-## Part 2: Form Input and Events
-
-**Task 3 — HTML Form Setup.** The form has fields for a username and birth year, plus a Create / Update Profile button.
-
-**Task 4 — Event Listener.** Submitting the form validates the values, updates `userProfile`, and refreshes the profile on the page. The screenshot uses sample data.
-
-![Part 2: Profile form](screenshots/part-2-profile-form.png)
-
-## Part 3: DOM List Manipulation
-
-**Task 5 — Creating and Removing Elements.** The Add Item button adds a new `<li>` to the list. Remove Last Item deletes the last entry. The profile and hobby count update with the list.
-
-![Task 5: Add an item](screenshots/part-3a-dom-add.png)
-
-![Task 5: Remove the last item](screenshots/part-3b-dom-remove.png)
-
-## Work Summary
-
-Built a simple page with HTML and CSS. JavaScript handles the profile object, age calculation, form submission, and dynamic list updates. Open `index.html` in a browser to run the project.
-
-## GitHub Pages
-
-Upload all project files to a public GitHub repository. In the repository settings, enable GitHub Pages from the `main` branch and the root folder (`/`). Submit both the repository link and the GitHub Pages link.
-
-
----
-
 # Assignment 6: jQuery Portfolio
 
 **Name:** Aben Aibar  
@@ -113,9 +71,13 @@ Three skill bars start at zero width. Animate My Skills uses `.animate()` to mov
 
 I built a responsive portfolio page and used jQuery selectors, DOM updates, visibility and fade effects, slide panels, list editing, attribute changes, live form feedback, and animated skill bars. The page uses local SVG illustrations; the interactions run in the browser and do not send form data to a server. Sample favorite descriptions are labeled as examples and can be replaced with personal choices.
 
+## GitHub Pages
+
+[Open the Assignment 6 portfolio](https://lucius-re.github.io/HTML-CSS/). The previous /assignment6/ link remains available.
+
 ## How to run
 
-Open `assignment6/index.html` in a browser. An internet connection is needed to load jQuery from the official CDN. The illustrations are stored locally in `assignment6/assets/`.
+Open `index.html` in a browser. An internet connection is needed to load jQuery from the official CDN. The illustrations are stored locally next to the page.
 
 ## References
 

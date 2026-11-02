@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">A garden of ideas</title>
+  <desc id="desc">Soft colorful shapes, sprouts and a tiny sun suggest new ideas taking root.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e4e9dd"/><stop offset="1" stop-color="#f1eee2"/></linearGradient>
+    <linearGradient id="ground" x2="1"><stop stop-color="#a9b797"/><stop offset="1" stop-color="#7d987b"/></linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <circle cx="748" cy="122" r="52" fill="#e9d171" opacity=".9"/>
+  <g fill="none" stroke="#7d927f" stroke-width="2" opacity=".45">
+    <ellipse cx="492" cy="266" rx="316" ry="161" transform="rotate(-13 492 266)"/>
+    <ellipse cx="492" cy="266" rx="270" ry="201" transform="rotate(33 492 266)"/>
+  </g>
+  <path d="M0 413q175-44 325 1t313-4q170-48 322-1v191H0z" fill="url(#ground)"/>
+  <path d="M0 450q194-36 352 9t303-8q168-38 305-4" fill="none" stroke="#c7cfb8" stroke-width="3" opacity=".55"/>
+  <g transform="translate(449 187)">
+    <path d="M38 217q-2-85 8-154" fill="none" stroke="#536e58" stroke-width="8" stroke-linecap="round"/>
+    <path d="M43 121Q-16 64-53 89q11 64 94 67M47 89Q68 21 132 28q4 60-78 89" fill="#83a27e"/>
+    <path d="M46 163q-62-55-90-29 18 57 87 63M50 134q61-65 104-38-15 62-99 81" fill="#6f9274"/>
+    <path d="M42 218Q-3 252-50 238q28-40 90-37" fill="#9cad7e"/>
+    <path d="M40 218q65 31 112 3-37-38-107-39" fill="#a4b587"/>
+    <circle cx="48" cy="48" r="17" fill="#d96b50"/>
+    <circle cx="48" cy="48" r="5" fill="#f2d782"/>
+  </g>
+  <g transform="translate(228 322)">
+    <path d="M0 94q-4-51 4-87" fill="none" stroke="#526e58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M3 45Q-41 8-73 27q11 49 72 57M4 28Q38-13 70 1q-8 40-64 51" fill="#97aa82"/>
+    <circle cx="4" cy="4" r="10" fill="#b6a1d9"/><circle cx="4" cy="4" r="3" fill="#f1d775"/>
+  </g>
+  <g transform="translate(738 352)">
+    <path d="M0 77Q-2 33 5 3" fill="none" stroke="#536e58" stroke-width="6" stroke-linecap="round"/>
+    <path d="M2 42Q-42 8-69 24q9 46 68 57M5 29Q34-8 68 2q-8 39-61 51" fill="#ad9bce"/>
+    <circle cx="5" cy="2" r="10" fill="#e4a079"/><circle cx="5" cy="2" r="3" fill="#f1d775"/>
+  </g>
+  <g fill="#f4edda" opacity=".9"><circle cx="336" cy="168" r="5"/><circle cx="355" cy="146" r="3"/><circle cx="671" cy="266" r="4"/><circle cx="275" cy="259" r="3"/><circle cx="601" cy="167" r="4"/></g>
+  <g transform="translate(115 118)" fill="none" stroke="#d96b50" stroke-width="3" stroke-linecap="round"><path d="M0 0v29M-14 15h28M-10 5l20 20M10 5l-20 20"/></g>
+  <path d="M137 474q109-24 178 12M581 512q126-34 215 2" fill="none" stroke="#d9dfca" stroke-width="3" stroke-linecap="round" opacity=".56"/>
+</svg>
