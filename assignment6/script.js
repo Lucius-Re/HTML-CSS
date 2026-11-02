@@ -154,7 +154,7 @@ $(document).ready(function () {
   $("#change-link").on("click", function () {
     showingProject = !showingProject;
     if (showingProject) {
-      socialLink.attr("href", "https://github.com/Lucius-Re/HTML-CSS").text("GitHub project ");
+      socialLink.attr("href", "https://github.com/Lucius-Re/HTML-CSS/tree/assignment6-jquery").text("GitHub project ");
       $("#link-status").text("PROJECT");
     } else {
       socialLink.attr("href", "https://github.com/Lucius-Re").text("GitHub profile ");
